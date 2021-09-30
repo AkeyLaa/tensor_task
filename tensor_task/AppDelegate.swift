@@ -9,6 +9,10 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    static var shared: UIApplicationDelegate? {
+        return UIApplication.shared.delegate
+    }
 
     var window: UIWindow?
     

@@ -23,6 +23,13 @@ class ContactListModuleController: UIViewController {
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: view.bounds)
+        tableView.isUserInteractionEnabled = true
+        tableView.register(ContactCell.self, forCellReuseIdentifier: "ContactCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200.0
+        tableView.backgroundColor = UIColor(named: "ContactBackground")
+        tableView.delegate = self
         view.addSubview(tableView)
         return tableView
     }()
@@ -43,14 +50,19 @@ class ContactListModuleController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = UIColor(named: "ContactBackground")
         
-        view.addSubview(tableView)
-        tableView.register(ContactCell.self, forCellReuseIdentifier: "ContactCell")
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 200.0
-        tableView.backgroundColor = UIColor(named: "ContactBackground")
-        tableView.delegate = self
         items.asObservable().bind(to: tableView.rx.items(dataSource: dataSource())).disposed(by: disposeBag)
         items.accept([.colleaguesSection(header: "Коллеги", items: testData.filter({ $0.contactType == .colleague }).map({ .contactItem(contact: $0) })), .friendsSection(header: "Друзья", items: testData.filter({ $0.contactType == .friend }).map({ .contactItem(contact: $0) }))])
+        tableView.rx.modelSelected(ContactListSectionItems.self)
+            .subscribe(onNext: { [weak self] item in
+                switch item {
+                case .contactItem(contact: let contact):
+                    /// TODO Router
+                    let vc = EditContactModuleViewController()
+                    vc.configure(contact: contact)
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                break
+                }
+            }).disposed(by: disposeBag)
     }
     
     fileprivate func dataSource() -> RxTableViewSectionedReloadDataSource<ContactListSection> {

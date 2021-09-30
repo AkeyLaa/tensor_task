@@ -26,34 +26,34 @@ class ContactCell: UITableViewCell {
         return label
     }()
     
-    lazy var contactLabel: UITitledView = {
-        let label = UITitledView("Телефон")
+    lazy var contactLabel: UITitledLabel = {
+        let label = UITitledLabel("Телефон")
         label.textLabel.textColor = .white
         return label
     }()
     
-    lazy var birthdayLabel: UITitledView = {
-        let label = UITitledView("Дата рождения")
+    lazy var birthdayLabel: UITitledLabel = {
+        let label = UITitledLabel("Дата рождения")
         label.textLabel.textColor = .white
         return label
     }()
     
-    lazy var postLabel: UITitledView = {
-        let label = UITitledView("Должность")
+    lazy var postLabel: UITitledLabel = {
+        let label = UITitledLabel("Должность")
         label.textLabel.numberOfLines = 0
         label.textLabel.textColor = .white
         return label
     }()
     
-    lazy var workPhoneLabel: UITitledView = {
-        let label = UITitledView("Рабочий телефон")
+    lazy var workPhoneLabel: UITitledLabel = {
+        let label = UITitledLabel("Рабочий телефон")
         label.textLabel.textColor = .white
         return label
     }()
     
     func configure(contact: ContactModel) {
         setupView(contact.contactType)
-        setupContraints(contact.contactType)
+        setupConstraints(contact.contactType)
         fullnameLabel.text = contact.fullname
         contactLabel.textLabel.text = contact.contactPhone
         if contact.contactType == .colleague {
@@ -84,7 +84,7 @@ class ContactCell: UITableViewCell {
         }
     }
     
-    func setupContraints(_ contactType: ContactEnum) {
+    func setupConstraints(_ contactType: ContactEnum) {
         iconImageView.snp.makeConstraints { make in
             make.width.height.equalTo(50)
             make.left.top.equalToSuperview().offset(10)
