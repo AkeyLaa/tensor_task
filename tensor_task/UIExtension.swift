@@ -16,7 +16,7 @@ extension UITextView {
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let done: UIBarButtonItem = UIBarButtonItem(title: "Готово", style: .done, target: self, action: #selector(resignFirstResponder))
-        done.tintColor = .white
+        done.tintColor = DefaultStyle.Colors.doneButton
         let items = [flexSpace, done]
         doneToolbar.items = items
         doneToolbar.sizeToFit()

@@ -123,42 +123,42 @@ class EditContactCell: UITableViewCell {
         }
         surnameTextView.snp.makeConstraints { make in
             make.top.equalTo(editIconButton.snp.bottom).offset(10)
-            make.left.equalToSuperview().offset(10)
-            make.right.equalToSuperview().inset(10)
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().inset(20)
         }
         nameTextView.snp.makeConstraints { make in
             make.top.equalTo(surnameTextView.snp.bottom).offset(10)
-            make.left.equalToSuperview().offset(10)
-            make.right.equalToSuperview().inset(10)
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().inset(20)
         }
         middlenameTextView.snp.makeConstraints { make in
             make.top.equalTo(nameTextView.snp.bottom).offset(10)
-            make.left.equalToSuperview().offset(10)
-            make.right.equalToSuperview().inset(10)
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().inset(20)
         }
         contactTextView.snp.makeConstraints { make in
             make.top.equalTo(middlenameTextView.snp.bottom).offset(10)
-            make.left.equalToSuperview().offset(10)
-            make.right.equalToSuperview().inset(10)
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().inset(20)
         }
         
         if contactType == .colleague {
             postTextView.snp.makeConstraints { make in
                 make.top.equalTo(contactTextView.snp.bottom).offset(10)
-                make.left.equalToSuperview().offset(10)
-                make.right.equalToSuperview().inset(10)
+                make.left.equalToSuperview().offset(20)
+                make.right.equalToSuperview().inset(20)
             }
             workPhoneTextView.snp.makeConstraints { make in
                 make.top.equalTo(postTextView.snp.bottom).offset(10)
-                make.left.equalToSuperview().offset(10)
-                make.right.equalToSuperview().inset(10)
+                make.left.equalToSuperview().offset(20)
+                make.right.equalToSuperview().inset(20)
                 make.bottom.equalToSuperview().inset(20)
             }
         } else {
             birthdayTextView.snp.makeConstraints { make in
                 make.top.equalTo(contactTextView.snp.bottom).offset(10)
-                make.left.equalToSuperview().offset(10)
-                make.right.equalToSuperview().inset(10)
+                make.left.equalToSuperview().offset(20)
+                make.right.equalToSuperview().inset(20)
                 make.bottom.equalToSuperview().inset(20)
             }
         }

@@ -12,12 +12,13 @@ class UITitledLabel: UIView {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .systemGray2
-        //label.font = label.font.withSize(20)
+        label.font.withSize(14)
         return label
     }()
     
     lazy var textLabel: UILabel = {
         let label = UILabel()
+        label.font.withSize(14)
         return label
     }()
     

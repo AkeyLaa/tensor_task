@@ -13,6 +13,7 @@
 		A515F62827059BDB00A835C5 /* UITitledTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515F62727059BDB00A835C5 /* UITitledTextView.swift */; };
 		A515F62A2705C59400A835C5 /* UITextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515F6292705C59400A835C5 /* UITextViewWithPlaceholder.swift */; };
 		A515F62F2706565300A835C5 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = A515F62E2706565300A835C5 /* RxKeyboard */; };
+		A515F63127065AB100A835C5 /* UIStyleAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515F63027065AB100A835C5 /* UIStyleAppearance.swift */; };
 		A5918E162704BEC300DAD757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5918E152704BEC200DAD757 /* AppDelegate.swift */; };
 		A5918E1A2704BEC300DAD757 /* ContactListModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5918E192704BEC300DAD757 /* ContactListModuleController.swift */; };
 		A5918E1F2704BEC500DAD757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5918E1E2704BEC500DAD757 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		A515F62527059B5400A835C5 /* UITitledLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITitledLabel.swift; sourceTree = "<group>"; };
 		A515F62727059BDB00A835C5 /* UITitledTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITitledTextView.swift; sourceTree = "<group>"; };
 		A515F6292705C59400A835C5 /* UITextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewWithPlaceholder.swift; sourceTree = "<group>"; };
+		A515F63027065AB100A835C5 /* UIStyleAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyleAppearance.swift; sourceTree = "<group>"; };
 		A5918E122704BEC200DAD757 /* tensor_task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tensor_task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5918E152704BEC200DAD757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5918E192704BEC300DAD757 /* ContactListModuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListModuleController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				A515F62527059B5400A835C5 /* UITitledLabel.swift */,
 				A515F62727059BDB00A835C5 /* UITitledTextView.swift */,
 				A515F6292705C59400A835C5 /* UITextViewWithPlaceholder.swift */,
+				A515F63027065AB100A835C5 /* UIStyleAppearance.swift */,
 			);
 			path = tensor_task;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				A5918E362704E65100DAD757 /* UIExtension.swift in Sources */,
 				A5918E312704C40E00DAD757 /* ContactModel.swift in Sources */,
 				A515F62127058EA500A835C5 /* EditContactModuleViewController.swift in Sources */,
+				A515F63127065AB100A835C5 /* UIStyleAppearance.swift in Sources */,
 				A515F62427059AB300A835C5 /* EditContactCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

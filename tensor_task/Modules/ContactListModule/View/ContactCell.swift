@@ -21,7 +21,7 @@ class ContactCell: UITableViewCell {
     lazy var fullnameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.textColor = .white
         return label
     }()

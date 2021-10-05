@@ -23,7 +23,7 @@ class EditContactModuleViewController: UIViewController {
         let tableView = UITableView(frame: view.bounds)
         tableView.register(EditContactCell.self, forCellReuseIdentifier: "EditContactCell")
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = view.bounds.height
+        tableView.estimatedRowHeight = view.bounds.height * 2
         tableView.backgroundColor = UIColor(named: "ContactBackground")
         //tableView.delegate = self
         view.addSubview(tableView)

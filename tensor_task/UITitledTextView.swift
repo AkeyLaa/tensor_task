@@ -11,12 +11,14 @@ class UITitledTextView: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
+        label.font.withSize(14)
         label.textColor = .systemGray2
         return label
     }()
     
     lazy var textView: UITextViewWithPlaceholder = {
         let textView = UITextViewWithPlaceholder()
+        textView.font?.withSize(14)
         textView.addDoneButtonOnKeyboard()
         return textView
     }()
